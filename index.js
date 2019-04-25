@@ -65,15 +65,21 @@ function parseToken(jwt){
     }
 }
 
-function start(){
+function start() {
     const query = getQuery();
-    if(query){
+    if (query) {
         const json = parseToken(query.data);
-        startChat({
-                email:json.email,
-                customFields:generateCustomFields(json),
-                formTitle: 'To get started, please enter your name.',
-        });
+        const interval = setInterval(() => {
+            if (AnswersWidget !== undefined) {
+                clearInterval(interval);
+                startChat({
+                    email: json.email,
+                    customFields: generateCustomFields(json),
+                    formTitle: 'To get started, please enter your name.',
+                });
+            }
+        }, 1000);
+
     }
 }
 
