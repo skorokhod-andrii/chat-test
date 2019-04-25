@@ -117,7 +117,7 @@ iframe {
     border: unset;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 10px;
     padding: 7px 12px;
     border-radius: 14.5px;
     font-family: HelveticaNeueW01-55Roma;
@@ -128,14 +128,12 @@ iframe {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff;
+    background-color: #4eb7f5;
     z-index: 5;
     background-color: rgba(22, 45, 61, 0.24);
     cursor:pointer;
 }
-.close-chat-modal-button:hover{
-    background-color: #4eb7f5;
-}
+
 #contact-chat-element {
     height:100%;
 }

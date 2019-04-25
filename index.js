@@ -28,6 +28,7 @@ const endChat = () => {
         AnswersWidget.clearChats(true);
         AnswersWidget.ejectFromElementById(idForInject);
         AnswersWidget.destroy();
+        window.location.href = 'https://www.wix.com';
     }
 };
 
@@ -82,5 +83,4 @@ function start() {
 
     }
 }
-console.log('test')
 start();
